@@ -1,0 +1,6 @@
+Fri Dec 13 16:41:48 MST 2019
+Item: Drink		Cost: 0.0
+size: Large	Flavor Orange Fanta
+
+Item: Burger		Cost: 0.0
+ w/ [Bacon, Cheese, Tomato]

@@ -8,7 +8,7 @@ public class Food {
 
     private String name = "food item";
     private double cost = 0.00;
-    private int quantity = 1;
+
 
     /** Construct a default Food object */
     public Food() {
@@ -18,7 +18,6 @@ public class Food {
      *  cost and quantity*/
     public Food(String name) {
         this.name = name;
-//        this.quantity = quantity;
     }
     /** sets the name of Food item*/
     public void setName(String name) {
@@ -30,10 +29,6 @@ public class Food {
     this.cost = cost;
     }
 
-    /** sets the quantity of Food item*/
-    public void setQuantity(int quantity){
-
-    }
 
     /** Return  name*/
     public String getName(){
@@ -43,8 +38,6 @@ public class Food {
     /** Return  cost*/
     public double getCost(){return cost;}
 
-    /** Return  quantity*/
-    public int getQuantity(){ return quantity;}
 
     /** Return a string representation of this object */
     public String toString() {

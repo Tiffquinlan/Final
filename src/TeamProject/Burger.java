@@ -8,40 +8,72 @@ import java.util.ArrayList;
  * constructs a burger w/ toppings and cost
  */
 
+
 public class Burger extends Food {
     // inherits form Food class
     private ArrayList<String> toppings;
     private Array validToppings;
-    //validToppings [Patty, bacon, cheese, lettuce, tomato, pickles, onions ]; create an array with the valid inputs to check for errors
-    private String topping = "n"; //  default toppings n = none
 
     public Burger(String burger, ArrayList<String> toppings) {
         super.setName(burger);
         this.toppings = toppings;
     }
 
-    public void setToppings(){
-        /**
-         * setToppings
-         * Purpose: adds a topping to the burger's Toppings List.
+    public void setToppings(ArrayList<String> toppings){
+        /*
+          setToppings
+          Purpose: adds a topping to the burger object.
          */
+        this.toppings = toppings;
     }
     public ArrayList<String> getToppings(){
-        /**
+        /*
+         * getToppings method
          * Purpose: returns the toppings for a burger object.
-         * @return Array (topping)
+         * @return Array (toppings)
          */
         return toppings;
     }
     public double getCost(ArrayList<String> toppings) {
+        /*
+         * getCost method
+         * Purpose: to calculate the cost of a burger object
+         * @param calculate the cost, as a double
+         * @return double
+         */
         double price = 5.00;
         for (String topping : toppings) price = +.50;
         super.setCost(price);
         return price;
     }
+    public boolean getValidToppings(String topping) {
+        /*
+         * getValidTopping
+         * Purpose: to verify the toppings for a burger object
+         * @param verify topping, returns true if topping found
+         * @return boolean
+         */
+
+        String[] validToppings = {"Patty", "bacon", "cheese", "lettuce", "tomato", "pickles", "onions"};
+        boolean valid = false;
+        for (String validTopping : validToppings) {
+            if (topping.equals(validTopping)) {
+                valid = true;
+                break;
+            }
+        }
+        return valid;
+    }
+
 
     @Override // override the Food toString to include the toppings in the output
     public String toString() {
+        /**
+         * the toString method
+         * Purpose” to display the Object attributes with help from the super class
+         * @param display attributes of an object, as a string
+         * @return String
+         */
         return super.toString() + "\n w/ " + toppings +"\n";
     }
 

@@ -11,37 +11,52 @@ public class Pizza extends Food {
     // inherits form Food class
     private String size = "s";
     private ArrayList<String> toppings;
-    private Array validToppings;
-    //validSize [s,m,l]; create an array with the valid inputs to check for errors
-    //create an additional set and get method for size
-    private String topping = "n";
 
     public Pizza(String pizza, String size, ArrayList<String> toppings) {
         this.setName(pizza);
         this.toppings = toppings;
     }
-
-    //validToppings [Pepperoni, sausage, peppers, chicken, salami, tomatoes, olives, anchovies ]; create an array with the valid inputs to check for errors
-    //create an additional set and get method for size
-    public void setToppings(String topping){
-        // add topping to the Pizza's toppings
-    }
     public void setSize(String size) {
+        /*
+         * setSize method
+         * Purpose: sets the size of a pizza object
+         * @param creates the siz of the pizza
+         * @return void
+         */
         this.size = size;
     }
+    public void setToppings(ArrayList<String> toppings){
+        /*
+         * setToppings
+         * Purpose: sets the toppings for a pizza object
+         * @return void
+         */
+        this.toppings = toppings;
+    }
+    public String getSize() {
+        /*
+         * getSize method
+         * Purpose: return the size of a pizza object
+         * @param return size, as a String
+         * @return double
+         */
+        return size;
+    }
     public ArrayList<String> getToppings(){
-        /**
+        /*
          * getToppings
          * Purpose: returns the toppings for a burger object.
          * @return ArrayList (topping)
          */
         return toppings;
     }
-    public String getSize() {
-        return size;
-    }
-
     public double getCost(String size) {
+        /*
+         * getCost method
+         * Purpose: to calculate the cost of a pizza object
+         * @param calculate the cost, as a double
+         * @return double
+         */
         double price = 1;
         switch (size) {
             case "Small":
@@ -58,9 +73,33 @@ public class Pizza extends Food {
         super.setCost(price);
         return price;
     }
+    public boolean getValidToppings(String topping) {
+        /*
+         * getValidTopping
+         * Purpose: to verify the toppings for a pizza object
+         * @param verify topping, returns true if topping found
+         * @return boolean
+         */
+
+        String[] validToppings = {"Pepperoni", "sausage", "peppers", "chicken", "salami", "tomatoes", "olives", "anchovies"};
+        boolean valid = false;
+        for (String validTopping : validToppings) {
+            if (topping.equals(validTopping)) {
+                valid = true;
+                break;
+            }
+        }
+        return valid;
+    }
 
     @Override // override the Food toString to include the size and toppings in the output
     public String toString() {
+        /*
+         * the toString method
+         * Purpose” to display the Object attributes with help from the super class
+         * @param display attributes of an object, as a string
+         * @return String
+         */
         return super.toString() + "\nsize: " + size + "\t\t w/" + toppings +"\n";
     }
 }

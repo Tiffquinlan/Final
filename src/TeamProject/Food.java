@@ -36,7 +36,9 @@ public class Food {
     }
 
     /** Return  cost*/
-    public double getCost(){return cost;}
+    public double getCost(){
+        return cost;
+    }
 
 
     /** Return a string representation of this object */

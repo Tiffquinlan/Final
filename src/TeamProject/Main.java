@@ -369,7 +369,11 @@ public class Main {
                 System.out.print("\nWhat toppings would you like to add? Each pizza starts with cheese and red sauce.\n" +
                         "P- pepperoni\n" +
                         "S- sausage\n" +
+                        "R- peppers\n" +
+                        "C- chicken\n" +
+                        "M- salami\n" +
                         "O- olives\n" +
+                        "T- tomatoes\n" +                 
                         "A- anchovies \n Please enter your toppings one at a time.\n");
                 String answer = input.nextLine();
 
@@ -388,6 +392,13 @@ public class Main {
                         toppings.add("Sausage");
                         y = 0;
                         break;
+                    case "R":
+                    case "r":
+                    case "Peppers":
+                    case "peppers":
+                        toppings.add("Peppers");
+                        y = 0;
+                        break;    
                     case "A":
                     case "a":
                     case "Anchovies":
@@ -400,6 +411,27 @@ public class Main {
                     case "Olives":
                     case "olives":
                         toppings.add("Olives");
+                        y = 0;
+                        break;
+                    case "T":
+                    case "t":
+                    case "Tomatoes":
+                    case "tomatoes":
+                        toppings.add("Tomatoes");
+                        y = 0;
+                        break;
+                    case "M":
+                    case "m":
+                    case "Salami":
+                    case "salami":
+                        toppings.add("Tomatoes");
+                        y = 0;
+                        break;
+                    case "C":
+                    case "c":
+                    case "Chicken":
+                    case "chicken":
+                        toppings.add("Chicken");
                         y = 0;
                         break;
                     default:

@@ -103,6 +103,7 @@ public class Beverage extends Food {
          * @param display attributes of an object, as a string
          * @return String
          */
-        return super.toString()+"\nsize: " + size + "\t\tFlavor " + type +'\n';
+        return String.format(super.toString() + "%nSize: %s \t Flavor:%s %n", size, type);
+
     }
 }

@@ -103,6 +103,6 @@ public class Pizza extends Food {
          * @param display attributes of an object, as a string
          * @return String
          */
-        return super.toString() + "\nsize: " + size + "\t\t w/" + toppings +"\n";
+        return String.format(super.toString() + "%nSize: %s \t Toppings:%s %n", size, toppings);
     }
 }

@@ -64,9 +64,9 @@ public class Main {
         //Ask user if what they would like to order.
         do {
             System.out.print("\nEnter the item you would like.\n" +
-                    "D-Drink\n" +
+                    "D- Drink\n" +
                     "B- Burger\n" +
-                    "P-Pizza\n");
+                    "P- Pizza\n");
 
             String answer = input.nextLine();
             switch (answer) {
@@ -130,9 +130,9 @@ public class Main {
         //Ask user if what size and type of drink they would like to order.
         do {
             System.out.print("\nWhat size of Drink would you like?\n" +
-                    "S-Small\n" +
-                    "M-Medium\n" +
-                    "L-Large\n");
+                    "S- Small\n" +
+                    "M- Medium\n" +
+                    "L- Large\n");
 
             String answer = input.nextLine();
             switch (answer) {

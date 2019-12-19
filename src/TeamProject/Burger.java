@@ -87,7 +87,8 @@ public class Burger extends Food {
          * @param display attributes of an object, as a string
          * @return String
          */
-        return super.toString() + "\n w/ " + toppings +"\n";
+        return String.format(super.toString() + "%nToppings:%s %n",  toppings);
+
     }
 
 }

@@ -1,3 +1,9 @@
-Wed Dec 18 18:38:05 MST 2019
-Item Burger, 	Cost: $5.50
- w/ [Onion]
+Thu Dec 19 13:23:14 MST 2019
+Item Burger 	Cost: $6.00
+Toppings:[Onion, Cheese] 
+
+Item Pizza 	Cost: $8.50
+Size: Medium 	 Toppings:[Sausage] 
+
+Item Drink 	Cost: $6.00
+Size: Medium 	 Flavor:Sprite 

@@ -15,6 +15,7 @@ public class Pizza extends Food {
 
     public Pizza(String pizza, String size, ArrayList<String> toppings) {
         this.setName(pizza);
+        this.size = size;
         this.toppings = toppings;
     }
     public void setSize(String size) {

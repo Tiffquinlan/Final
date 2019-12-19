@@ -25,10 +25,9 @@ public class Food {
     }
 
     /** sets the cost of Food item*/
-    public void setCost(double cost) {
+    public void setCost() {
     this.cost = cost;
     }
-
 
     /** Return  name*/
     public String getName(){
@@ -44,7 +43,7 @@ public class Food {
     /** Return a string representation of this object */
     public String toString() {
         return  "\nItem: " + name +
-                "\t\tCost: " + cost;
+                "\t\tCost: " + getCost();
     }
 
 }

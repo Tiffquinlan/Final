@@ -1,6 +1,9 @@
-Fri Dec 13 16:41:48 MST 2019
-Item: Drink		Cost: 0.0
-size: Large	Flavor Orange Fanta
+Wed Dec 18 17:48:34 MST 2019
+Item: Burger		Cost: 6.5
+ w/ [Lettuce, Onion, Cheese]
 
-Item: Burger		Cost: 0.0
- w/ [Bacon, Cheese, Tomato]
+Item: Pizza		Cost: 7.0
+size: s		 w/[Chicken, Pepperoni]
+
+Item: Drink		Cost: 6.5
+size: Large		Flavor Orange Fanta

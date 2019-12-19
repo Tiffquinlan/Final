@@ -11,6 +11,7 @@ public class Beverage extends Food {
  // inherits form Food class
     private String size = "s";
     private String type;
+    private double cost;
     private Array validType;
 
     public Beverage(String drink, String size, String type) {
@@ -52,20 +53,27 @@ public class Beverage extends Food {
          */
         return type;
     }
+
     public double getCost() {
-        double price = 1;
+        /*
+         * setCost method
+         * Purpose: to calculate the cost of a beverage
+         * @param calculate the cost, as a double
+         * @return void
+         */
+        double price = 5.50;
         switch (size) {
+
             case "Small":
-                setCost(5.50);
+                price = 5.50;
                 break;
             case "Medium":
-                setCost(6.00);
+                price = 6.00;
                 break;
             case "Large":
-                setCost(6.50);
+                price = 6.50;
                 break;
         }
-        super.setCost(price);
         return price;
     }
     public boolean getValidType(String type) {

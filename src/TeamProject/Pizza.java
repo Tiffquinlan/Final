@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class Pizza extends Food {
     // inherits form Food class
     private String size = "s";
+    private double cost = 5.00;
     private ArrayList<String> toppings;
 
     public Pizza(String pizza, String size, ArrayList<String> toppings) {
@@ -50,28 +51,29 @@ public class Pizza extends Food {
          */
         return toppings;
     }
-    public double getCost(String size) {
-        /*
-         * getCost method
-         * Purpose: to calculate the cost of a pizza object
-         * @param calculate the cost, as a double
-         * @return double
-         */
-        double price = 1;
-        switch (size) {
-            case "Small":
-                price =5.00;
-                break;
-            case "Medium":
-                price = 7.50;
-                break;
-            case "Large":
-                price = 10.00;
-                break;
-        }
-        for (String topping : toppings) price = + 1.00;
-        super.setCost(price);
-        return price;
+
+    public double getCost() {
+            /**
+             * setCost method
+             * Purpose: to calculate the cost of a pizza object
+             * @param calculate the cost, as a double
+             * @return void
+             */
+            double price = 5.00;
+            switch (size) {
+                case "Small":
+                    price = 5.00;
+                    break;
+                case "Medium":
+                    price = 7.50;
+                    break;
+                case "Large":
+                    price = 10.00;
+                    break;
+            }
+            for (String topping : toppings){price = price + 1.00;
+            }
+      return price;
     }
     public boolean getValidToppings(String topping) {
         /*

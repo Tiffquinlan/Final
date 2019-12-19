@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class Burger extends Food {
     // inherits form Food class
+    private double cost = 3.00;
     private ArrayList<String> toppings;
     private Array validToppings;
 
@@ -34,16 +35,28 @@ public class Burger extends Food {
          */
         return toppings;
     }
-    public double getCost(ArrayList<String> toppings) {
+    @Override
+    public void setCost() {
         /*
-         * getCost method
+         * setCost method
          * Purpose: to calculate the cost of a burger object
          * @param calculate the cost, as a double
-         * @return double
+         * @return void
          */
         double price = 5.00;
         for (String topping : toppings) price = +.50;
-        super.setCost(price);
+        super.setCost();
+    }
+    public double getCost() {
+        /*
+         * getCost method
+         * Purpose: to return the cost of a burger object
+         * @param return cost, as a double
+         * @return double
+         */
+        double price = 5.00;
+        for (String topping : toppings) price = price +.50;
+        super.setCost();
         return price;
     }
     public boolean getValidToppings(String topping) {
